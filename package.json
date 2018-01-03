@@ -1,0 +1,35 @@
+{
+  "name": "Mandalai",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-native-scripts": "1.8.1",
+    "jest-expo": "23.0.0",
+    "react-test-renderer": "16.0.0"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js --watch"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "@ptomasroos/react-native-multi-slider": "0.0.11",
+    "expo": "^23.0.4",
+    "firebase": "^4.8.1",
+    "react": "16.0.0",
+    "react-native": "0.50.3",
+    "react-native-elements": "^0.18.5",
+    "react-native-facebook-login": "^1.6.0",
+    "react-native-firebase-auth": "^1.0.1",
+    "react-native-gifted-chat": "^0.3.0",
+    "react-native-google-sign-in": "^1.0.16",
+    "react-native-settings-list": "^1.8.0",
+    "react-native-tab-navigator": "^0.3.4"
+  }
+}
