@@ -2,7 +2,11 @@ import {GiftedChat} from 'react-native-gifted-chat';
 import React, {Component} from 'react'
 import { Container, Header, Content, Icon, List, ListItem, Left, Body, Right, Thumbnail, Text, Button } from 'native-base';
 
-export default class NewMtg extends Component {
+export default class ChatScreen extends Component {
+
+    static navigationOptions = {
+    title: 'Messaging',
+    };
 
     state = {
         messages: [
@@ -46,7 +50,6 @@ export default class NewMtg extends Component {
                                     _id:1,
                                     name:"Rocky Xu",
                                     avatar:'https://scontent-dft4-2.cdninstagram.com/t51.2885-19/928642_1531465580399845_2020391934_a.jpg',
-
                                 }}
                                 showUserAvatar
                     />
