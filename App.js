@@ -1,94 +1,65 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Image, Text, StatusBar } from 'react-native';
+import { Container} from "native-base";
 import TabNavigator from 'react-native-tab-navigator';
-import NewMtg from "./src/components/NewMtg";
 import Meetings from "./src/components/Meetings";
-import ToDoList from "./src/components/ToDoList";
-import Contacts from "./src/components/Contacts";
-import Settings from "./src/components/settings/Settings";
+import NewMtg from "./src/components/NewMtg";
 
+//a walk around to use require dynamically
 
+const tabs = [
+    {selectedTab: "new mtg", title:"new mtg", imageUri: require('./src/img/icons/NewMeetingMessage.png'), tabContent:(<NewMtg/>)},
+    {selectedTab: "meetings", title:"meetings", imageUri: require('./src/img/icons/MeetingsIcon.png'), tabContent:(<Meetings/>)},
+    {selectedTab: "todo list", title:"todo list", imageUri: require('./src/img/icons/ToDoIcon.png'), tabContent:(<Text>todo list</Text>)},
+    {selectedTab: "contacts", title:"contacts", imageUri: require('./src/img/icons/ContactsIcon.png'), tabContent:(<Text>contacts</Text>)},
+    {selectedTab: "settings", title:"settings", imageUri: require('./src/img/icons/SettingsIcon.png'), tabContent:(<Text>settings</Text>)}
+];
 
 export default class App extends React.Component {
-    constructor(props){
-        super(props);
-        this.state ={
-            selectedTab: "meetings"
-        }
-    }
+
+  state ={
+            selectedTab: "meetings",
+        };
+
   render() {
     return (
-        <TabNavigator>
-          <TabNavigator.Item
-            selected={this.state.selectedTab === 'new mtg'}
-            title="new mtg"
-            renderIcon={() => <Image source={require('./src/img/icons/NewMeetingMessage.png')} style={styles.tabIcon}/>}
-            renderSelectedIcon={() => <Image source={require('./src/img/icons/NewMeetingMessage.png')} style={styles.tabIcon}/>}
-            onPress={() => this.setState({ selectedTab: 'new mtg' })}>
+              <Container>
+                  <StatusBar hidden={true} />
+                      <TabNavigator>
+                        {tabs.map((tab, i) => (
 
-              <NewMtg/>
+                        <TabNavigator.Item
+                            key={i}
+                            selected = {this.state.selectedTab === tab.selectedTab}
+                            title={tab.title}
+                            renderIcon={() =>
+                                <Image
+                                    source={tab.imageUri}
+                                    style={styles.tabIcon}/>}
+                            renderSelectedIcon={() =>
+                                <Image
+                                    source={tab.imageUri}
+                                    style={[styles.tabIcon, {opacity:0.5}]}/>}
 
-          </TabNavigator.Item>
+                            onPress={() => this.setState({selectedTab: tab.selectedTab })}
+                        >
+                            {tab.tabContent}
+                        </TabNavigator.Item>
 
-          <TabNavigator.Item
-            selected={this.state.selectedTab === 'meetings'}
-            title="meetings"
-            renderIcon={() => <Image source={require('./src/img/icons/MeetingsIcon.png')} style={styles.tabIcon}/>}
-            renderSelectedIcon={() => <Image source={require('./src/img/icons/MeetingsIcon.png')} style={styles.tabIcon}/>}
-            onPress={() => this.setState({ selectedTab: 'meetings' })}>
-
-              <Meetings/>
-
-          </TabNavigator.Item>
-
-          <TabNavigator.Item
-            selected={this.state.selectedTab === 'todo list'}
-            title="todo list"
-            renderIcon={() => <Image source={require('./src/img/icons/ToDoIcon.png')} style={styles.tabIcon}/>}
-            renderSelectedIcon={() => <Image source={require('./src/img/icons/ToDoIcon.png')} style={styles.tabIcon}/>}
-            onPress={() => this.setState({ selectedTab: 'todo list' })}>
-
-              <ToDoList/>
-
-          </TabNavigator.Item>
-
-          <TabNavigator.Item
-            selected={this.state.selectedTab === 'contacts'}
-            title="contacts"
-            renderIcon={() => <Image source={require('./src/img/icons/ContactsIcon.png')} style={styles.tabIcon}/>}
-            renderSelectedIcon={() => <Image source={require('./src/img/icons/ContactsIcon.png')} style={styles.tabIcon}/>}
-            onPress={() => this.setState({ selectedTab: 'contacts' })}>
-
-              <Contacts/>
-
-          </TabNavigator.Item>
+                        ))}
+                    </TabNavigator>
+              </Container>
 
 
-          <TabNavigator.Item
-            selected={this.state.selectedTab === 'settings'}
-            title="settings"
-            renderIcon={() => <Image source={require('./src/img/icons/SettingsIcon.png')} style={styles.tabIcon}/>}
-            renderSelectedIcon={() => <Image source={require('./src/img/icons/SettingsIcon.png')} style={styles.tabIcon}/>}
-            onPress={() => this.setState({ selectedTab: 'settings' })}>
-
-              <Settings/>
-
-          </TabNavigator.Item>
-        </TabNavigator>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
     tabIcon: {
         width:25,
-        height:25
+        height:25,
+        margin:3,
+
     }
 });
