@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a20ce45c-09fb-4bde-9f06-009e94c28506" name="Default" comment="">
+<<<<<<< Updated upstream
       <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -94,6 +98,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+<<<<<<< Updated upstream
+=======
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="nodejs_interpreter_path" value="/usr/bin/node" />
+>>>>>>> Stashed changes
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -125,6 +134,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515006381711</updated>
+<<<<<<< Updated upstream
+=======
+      <workItem from="1515283461716" duration="353000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="&quot;First Commit - Tab Navigation&quot;">
       <created>1515006502554</created>
@@ -140,9 +153,22 @@
       <option name="project" value="LOCAL" />
       <updated>1515032519425</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;First Commit - Add some mock data&quot;">
+      <created>1515283611134</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1515283611134</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+<<<<<<< Updated upstream
+=======
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="353000" />
+  </component>
+>>>>>>> Stashed changes
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="2495" height="1444" extended-state="6" />
     <layout>
@@ -178,7 +204,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;First Commit - Tab Navigation&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;First Commit - Tab Navigation&quot;" />
+    <MESSAGE value="&quot;First Commit - Add some mock data&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;First Commit - Add some mock data&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
