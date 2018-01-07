@@ -15,14 +15,15 @@ export default class MessageDetail extends Component {
     };
 
     componentWillMount() {
-      const userMap = this.props.navigation.state.params.user;
     this.setState({
-      messages: Messages.map((message) => {
-          const userId = message.user;
-          let newMessage = message;
-          newMessage.user = userMap.get(userId);
-          return newMessage
-      }),
+         messages: [
+            {
+              _id: 1,
+              text: 'When do you like to meet?',
+              createdAt: new Date(),
+              user: this.props.navigation.state.params.user,
+            },
+          ],
     });
   }
 

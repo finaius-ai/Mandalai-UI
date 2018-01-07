@@ -50,7 +50,7 @@ export default class MeetingList extends Component {
 
               <Body>
 
-              <TouchableOpacity onPress={() => navigate('MessageDetail', {user : this.state.users })}>
+              <TouchableOpacity onPress={() => navigate('MessageDetail', {user : this.state.users.get(data.initiator) })}>
                 <Text>{this.state.users.get(data.initiator).name}</Text>
                 <Text note>{data.meetingType}</Text>
               </TouchableOpacity>
