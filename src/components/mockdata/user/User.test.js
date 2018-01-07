@@ -3,24 +3,24 @@
 const Users = require("./User.js");
 
 
-test("Users array not empty", () => {
+it("Users array not empty", () => {
     expect(Users).toBeTruthy();
 });
 
-test("First user has the right property", () => {
+it("First user has the right property", () => {
     expect(Users[1].name).toBe("Veer Singh");
 });
 
-test("Setting has the right source", () => {
+it("Setting has the right source", () => {
     expect(Users[1].setting.sourceMedium[0].source).toBe("gmail");
 });
 
-test("Users are 10", () => {
+it("Users are 10", () => {
    expect(Users.length).toBe(10)
 });
 
 
-test("Friendship match", ()=> {
+it("Friendship match", ()=> {
     const idx = Math.floor(Math.random() * 9 );
     const aUser = Users[idx];
     const aFriendId = parseInt(aUser.friends[1]);
@@ -32,4 +32,9 @@ test("Friendship match", ()=> {
         expect(aFriendsFriends).toContain(aUser.id_);
     }
 
+});
+
+it("Convert the array to Map", ()=> {
+    const userMap = new Map(Users.map((user, index) => ([user.id_, user])));
+    console.log(userMap)
 });

@@ -7,7 +7,9 @@ it('renders without crashing', () => {
   expect(rendered).toBeTruthy();
 });
 
+/*
 it('state is initialized', () => {
   const newmtg = new NewMtg();
   expect(newmtg.state).toBeTruthy();
 });
+ */
