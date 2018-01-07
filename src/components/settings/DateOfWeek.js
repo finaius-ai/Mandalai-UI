@@ -26,7 +26,6 @@ export default class DateOfWeek extends Component{
         return (
             <Container>
                 <Content>
-                    <View style={styles.container}></View>
                     <View style={styles.datesContainer}>
                     {this.state.Dates.map((date, index) => {
                             let backGroundColor = '#fff';
@@ -63,13 +62,13 @@ export default class DateOfWeek extends Component{
 
 const styles = StyleSheet.create({
     container:{
-        flex
+        //flex
     },
 
     datesContainer:{
         flexDirection:"row",
         justifyContent: "center",
-        flexWrap:"wrap"
+        flexWrap:"wrap",
     },
     badger: {
         height: 32,
