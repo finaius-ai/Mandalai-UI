@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Image, Text, StatusBar } from 'react-native';
-import { Container, Header, Left, Button, } from "native-base";
+import { Container, Header, Left, Button, Icon } from "native-base";
 import Users from '../mockdata/user/User';
 
 export default class Contacts extends React.Component {
@@ -24,7 +24,8 @@ export default class Contacts extends React.Component {
             <Container>
                 <Header>
                     <Left>
-                        <Button rounded style={{color: 'green'}} />
+                        <Button rounded success>
+                            <Icon name={}
                     </Left>
                 </Header>
 
