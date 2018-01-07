@@ -1,8 +1,10 @@
 import {GiftedChat} from 'react-native-gifted-chat';
 import React, {Component} from 'react'
 import { Container, Header, Content, Icon, List, ListItem, Left, Body, Right, Thumbnail, Text, Button } from 'native-base';
+import {StackNavigator} from "react-navigation";
 
-export default class ChatScreen extends Component {
+
+export default class NewMtg extends Component {
 
     static navigationOptions = {
     title: 'Messaging',

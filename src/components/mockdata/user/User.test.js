@@ -1,7 +1,7 @@
 
 
 const Users = require("./User.js");
-
+const meetings = require("../meeting/MeetingData");
 
 it("Users array not empty", () => {
     expect(Users).toBeTruthy();
@@ -24,17 +24,19 @@ it("Friendship match", ()=> {
     const idx = Math.floor(Math.random() * 9 );
     const aUser = Users[idx];
     const aFriendId = parseInt(aUser.friends[1]);
-    const aFriend = Users.filter((user)=> user.id_=== aFriendId)[0];
+    const aFriend = Users.filter((user)=> user._id=== aFriendId)[0];
     const aFriendsFriends = aFriend.friends.map((item)=> parseInt(item));
-    console.log(aUser.id_);
+    console.log(aUser._id);
     console.log(aFriendId);
-    if(aUser.id_ != aFriendId) {
-        expect(aFriendsFriends).toContain(aUser.id_);
+    if(aUser._id != aFriendId) {
+        expect(aFriendsFriends).toContain(aUser._id);
     }
 
 });
 
 it("Convert the array to Map", ()=> {
-    const userMap = new Map(Users.map((user, index) => ([user.id_, user])));
-    console.log(userMap)
+    const userMap = new Map(Users.map((user, index) => ([user._id, user])));
+    const aUserId = meetings[2].initiator;
+    expect(userMap.get(aUserId).avatar).toBeTruthy();
+    //console.log(userMap)
 });

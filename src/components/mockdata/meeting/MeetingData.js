@@ -1,6 +1,6 @@
 
 
-export const meetings = [
+const meetings = [
     {
         users: [2, 4],
         meetingType: ["Coffee",],
@@ -10,6 +10,7 @@ export const meetings = [
         meetingTheme: "Potential Merger",
         approved: true,
         initiator: 2,
+        requestedTime:new Date(2018, 1, 1, 14, 30),
     },
     {
         users: [5, 9],
@@ -20,6 +21,7 @@ export const meetings = [
         meetingTheme: "Catching up",
         approved: false,
         initiator: 5,
+        requestedTime:new Date(2018, 1, 1, 15, 30),
     },
     {
         users: [1,5],
@@ -30,6 +32,8 @@ export const meetings = [
         meetingTheme: "Prep for road trip",
         approved: true,
         initiator: 1,
+
+        requestedTime:new Date(2018, 1, 1, 15, 30),
     },
 
      {
@@ -41,6 +45,7 @@ export const meetings = [
         meetingTheme: "Prep for Investor Presentation",
         approved: false,
         initiator: 4,
+        requestedTime:new Date(2018, 1, 2, 14, 30),
     },
 
     {
@@ -52,6 +57,7 @@ export const meetings = [
         meetingTheme: "Catching up",
         approved: false,
         initiator: 3,
+        requestedTime:new Date(2018, 1, 2, 15, 30),
     },
 
     {
@@ -63,6 +69,8 @@ export const meetings = [
         meetingTheme: "Hang Out",
         approved: true,
         initiator: 9,
+
+        requestedTime:new Date(2018, 1, 3, 14, 30),
     },
 
     {
@@ -74,6 +82,7 @@ export const meetings = [
         meetingTheme: "Prep for Investor Presentation",
         approved: true,
         initiator: 4,
+        requestedTime:new Date(2018, 1, 3, 15, 30),
     },
     {
         users: [5, 9],
@@ -84,6 +93,7 @@ export const meetings = [
         meetingTheme: "Sale's prospecting",
         approved: true,
         initiator: 5,
+        requestedTime:new Date(2018, 1, 3, 16, 30),
     },
 
     {
@@ -95,6 +105,8 @@ export const meetings = [
         meetingTheme: "Client meet up",
         approved: true,
         initiator: 6,
+        requestedTime:new Date(2018, 1, 4, 14, 30),
+
     },
 
     {
@@ -106,6 +118,7 @@ export const meetings = [
         meetingTheme: "Catching up",
         approved: true,
         initiator: 7,
+        requestedTime:new Date(2018, 1, 4, 10, 30),
     },
 
      {
@@ -117,6 +130,7 @@ export const meetings = [
         meetingTheme: "Catching up",
         approved: false,
         initiator: 7,
+        requestedTime:new Date(2018, 1, 4, 15, 30),
     },
 
         {
@@ -128,6 +142,7 @@ export const meetings = [
         meetingTheme: "Sale's prospecting",
         approved: false,
         initiator: 9,
+        requestedTime:new Date(2018, 1, 5, 14, 30),
     },
 
     {
@@ -139,6 +154,7 @@ export const meetings = [
         meetingTheme: "Client meet up",
         approved: true,
         initiator: 10,
+        requestedTime:new Date(2018, 1, 5, 12, 30),
     },
 
     {
@@ -150,6 +166,7 @@ export const meetings = [
         meetingTheme: "Catching up",
         approved: false,
         initiator: 7,
+        requestedTime:new Date(2018, 1, 5, 13, 30),
     },
 
      {
@@ -161,6 +178,7 @@ export const meetings = [
         meetingTheme: "Catching up",
         approved: false,
         initiator: 7,
+        requestedTime:new Date(2018, 1, 5, 16, 30),
     },
 
          {
@@ -172,6 +190,7 @@ export const meetings = [
         meetingTheme: "Catching up",
         approved: false,
         initiator: 7,
+        requestedTime:new Date(2018, 1, 6, 14, 30),
     },
 
         {
@@ -183,6 +202,7 @@ export const meetings = [
         meetingTheme: "Sale's prospecting",
         approved: false,
         initiator: 4,
+        requestedTime:new Date(2018, 1, 6, 15, 30),
     },
 
     {
@@ -194,6 +214,7 @@ export const meetings = [
         meetingTheme: "Client meet up",
         approved: false,
         initiator: 5,
+        requestedTime:new Date(2018, 1, 6, 16, 30),
     },
 
     {
@@ -205,6 +226,7 @@ export const meetings = [
         meetingTheme: "Catching up",
         approved: false,
         initiator: 7,
+        requestedTime:new Date(2018, 1, 6, 17, 30),
     },
 
      {
@@ -216,6 +238,7 @@ export const meetings = [
         meetingTheme: "Catching up",
         approved: false,
         initiator: 2,
+        requestedTime:new Date(2018, 1, 6, 18, 30),
     },
 
         {
@@ -227,6 +250,7 @@ export const meetings = [
         meetingTheme: "Catching up",
         approved: false,
         initiator: 4,
+        requestedTime:new Date(2018, 1, 7, 14, 30),
     },
     {
         users: [3,5],
@@ -237,6 +261,7 @@ export const meetings = [
         meetingTheme: "Prep for road trip",
         approved: true,
         initiator: 5,
+        requestedTime:new Date(2018, 1, 8, 14, 30),
     },
 
      {
@@ -248,6 +273,7 @@ export const meetings = [
         meetingTheme: "Prep for Investor Presentation",
         approved: false,
         initiator: 4,
+        requestedTime:new Date(2018, 1, 8, 4, 30),
     },
 
     {
@@ -259,6 +285,7 @@ export const meetings = [
         meetingTheme: "Catching up",
         approved: false,
         initiator: 6,
+        requestedTime:new Date(2018, 1, 8, 10, 30),
     },
         {
         users: [3,5],
@@ -269,6 +296,7 @@ export const meetings = [
         meetingTheme: "Prep for road trip",
         approved: true,
         initiator: 5,
+        requestedTime:new Date(2018, 1, 8, 16, 30),
     },
 
      {
@@ -280,6 +308,7 @@ export const meetings = [
         meetingTheme: "Prep for Investor Presentation",
         approved: false,
         initiator: 4,
+        requestedTime:new Date(2018, 1, 9, 14, 30),
     },
 
     {
@@ -291,6 +320,8 @@ export const meetings = [
         meetingTheme: "Catching up",
         approved: false,
         initiator: 6,
+        requestedTime:new Date(2018, 1, 10, 14, 30),
     },
 
 ];
+module.exports = meetings;

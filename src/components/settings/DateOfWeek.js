@@ -69,7 +69,6 @@ const styles = StyleSheet.create({
         flexDirection:"row",
         justifyContent: "center",
         flexWrap:"wrap",
-        flexOffset:1
     },
     badger: {
         height: 32,

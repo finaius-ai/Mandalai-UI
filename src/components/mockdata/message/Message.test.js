@@ -9,5 +9,5 @@ test("Messages are 20", () => {
 
 test("Message id matches with sender", () => {
     const mid = Users[1].messages;
-   expect(mid).toContain(Messages[0].id_)
+   expect(mid).toContain(Messages[0]._id)
 });
