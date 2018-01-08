@@ -5,6 +5,7 @@ import TabNavigator from 'react-native-tab-navigator';
 import Meetings from "./src/components/meeting/Meetings";
 import NewMtg from "./src/components/meeting/NewMtg";
 import DateOfWeek from "./src/components/settings/DateOfWeek";
+import Contacts from "./src/components/contacts/Contacts";
 
 //a walk around to use require dynamically
 
@@ -12,7 +13,7 @@ const tabs = [
     {selectedTab: "new mtg", title:"new mtg", imageUri: require('./src/img/icons/NewMeetingMessage.png'), tabContent:(<NewMtg/>)},
     {selectedTab: "meetings", title:"meetings", imageUri: require('./src/img/icons/MeetingsIcon.png'), tabContent:(<Meetings/>)},
     {selectedTab: "todo list", title:"todo list", imageUri: require('./src/img/icons/ToDoIcon.png'), tabContent:(<Text>todo list</Text>)},
-    {selectedTab: "contacts", title:"contacts", imageUri: require('./src/img/icons/ContactsIcon.png'), tabContent:(<Text>contacts</Text>)},
+    {selectedTab: "contacts", title:"contacts", imageUri: require('./src/img/icons/ContactsIcon.png'), tabContent:(<Contacts/>)},
     {selectedTab: "settings", title:"settings", imageUri: require('./src/img/icons/SettingsIcon.png'), tabContent:(<DateOfWeek/>)}
 ];
 
