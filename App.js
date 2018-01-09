@@ -3,9 +3,9 @@ import { StyleSheet, Image, Text, StatusBar } from 'react-native';
 import { Container} from "native-base";
 import TabNavigator from 'react-native-tab-navigator';
 import Meetings from "./src/components/meeting/Meetings";
-import NewMtg from "./src/components/meeting/NewMtg";
 import DateOfWeek from "./src/components/settings/DateOfWeek";
 import Contacts from "./src/components/contacts/Contacts";
+import NewMtg from "./src/components/meeting/message/NewMtg";
 
 //a walk around to use require dynamically
 
