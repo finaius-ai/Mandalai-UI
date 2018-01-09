@@ -47,7 +47,6 @@ export default class Contacts extends React.Component {
 
 
     render(){
-
         return (
             <Container>
                 <Header>
@@ -68,9 +67,9 @@ export default class Contacts extends React.Component {
                 <Content>
                     <List>
                             {this.state.users.map((user, idx) => (
-                                <ListItem avatar key={user.id_}>
+                                <ListItem avatar key={user._id}>
                                     <Left>
-                                        <Thumbnail source={{url:user.avatar}} />
+                                        <Thumbnail source={{uri:user.avatar}} />
                                     </Left>
                                     <Body>
                                         <Text style={{fontWeight: 'bold'}}>{user.name}</Text>

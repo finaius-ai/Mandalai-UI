@@ -1,64 +1,60 @@
-import {GiftedChat} from 'react-native-gifted-chat';
-import React, {Component} from 'react'
-import { Container, Header, Content, Icon, List, ListItem, Left, Body, Right, Thumbnail, Text, Button } from 'native-base';
+import Autocomplete from 'react-native-autocomplete-input';
+import React, { Component } from 'react';
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
+} from 'react-native';
+import Users from '../../mockdata/user/User'
+import { Container, Header, Left, Button, Right, Body, Content, List, ListItem, Thumbnail} from "native-base";
+import UserCell from "./UserCell";
+import MessageDetail from "./MessageDetail";
+import MeetingList from "../MeetingList";
 import {StackNavigator} from "react-navigation";
 
+class MessageScreen extends Component {
 
-export default class NewMtg extends Component {
-
-    static navigationOptions = {
-    title: 'Messaging',
+  constructor(props) {
+    super(props);
+    this.state = {
+      query: ''
     };
-
-    state = {
-        messages: [
-
-        ]
-    };
-
-    componentWillMount() {
-    this.setState({
-      messages: [
-        {
-          _id: 1,
-          text: 'Hello developer',
-          createdAt: new Date(),
-          user: {
-            _id: 2,
-            name: 'React Native',
-            avatar: 'https://scontent-dft4-2.cdninstagram.com/t51.2885-19/s150x150/20478536_754964571341493_8693176032313737216_a.jpg',
-          },
-        },
-      ],
-    });
   }
+  findUser(q) {
 
-  onSend(messages = []){
-        this.setState((prevState) => (
-            {
-                messages:GiftedChat.append(prevState.messages, messages)
-            }
-        ))
+  return Users.filter((user) => user.name.toLowerCase().indexOf(q.toLowerCase())  !==-1)
+
   }
-
   render() {
-        return (
+    const { navigate } = this.props.navigation;
+    const { query } = this.state;
+    const users = this.findUser(query);
+    return (
+        <Container style={{backgroundColor: '#fff',}}>
+            <Autocomplete
+                autoCapitalize="none"
+                autoCorrect={false}
+                data={users}
+                defaultValue={query}
+                onChangeText={text => this.setState({query: text})}
+                placeholder="Search Contacts"
+                renderItem={(user) => (
+                        <UserCell user={user} onAddUser = {() => navigate('MessageDetail', {user : user })} />
+                )}
+            />
 
-              <Container>
-
-                    <GiftedChat messages={this.state.messages}
-                                onSend={(messages) => this.onSend(messages)}
-                                user={{
-                                    _id:1,
-                                    name:"Rocky Xu",
-                                    avatar:'https://scontent-dft4-2.cdninstagram.com/t51.2885-19/928642_1531465580399845_2020391934_a.jpg',
-                                }}
-                                showUserAvatar
-                    />
-
-              </Container>
-        )
-
+        </Container>
+    );
   }
-
 }
+
+const NewMtg = StackNavigator(
+    {
+        SearchContact : {screen: MessageScreen},
+        MessageDetail: {screen: MessageDetail}
+    }
+);
+
+export default NewMtg;
+

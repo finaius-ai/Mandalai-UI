@@ -36,10 +36,31 @@ let Users = [
             ],
 
             meetingTime: [
-                {meetingType:"coffee", dateOfTheWeek:0, begTimeOfDay:1, endTimeOfDay:2 },
-                {meetingType:"coffee", dateOfTheWeek:2, begTimeOfDay:4, endTimeOfDay:6 },
-                {meetingType:"drink", dateOfTheWeek:2, begTimeOfDay:4, endTimeOfDay:6 },
-                {meetingType: "lunch", dateOfTheWeek:1, begTimeOfDay:0, endTimeOfDay:2}
+                {
+                    meetingType: "coffee", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "drink", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "dinner", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+
             ]
 
         },
@@ -72,10 +93,31 @@ let Users = [
             ],
 
             meetingTime: [
-                {meetingType:"coffee", dateOfTheWeek:1, begTimeOfDay:0, endTimeOfDay:1 },
-                {meetingType:"coffee", dateOfTheWeek:3, begTimeOfDay:2, endTimeOfDay:4 },
-                {meetingType:"drink", dateOfTheWeek:2, begTimeOfDay:4, endTimeOfDay:6 },
-                {meetingType: "lunch", dateOfTheWeek:2, begTimeOfDay:0, endTimeOfDay:2}
+                {
+                    meetingType: "coffee", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "drink", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "dinner", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+
             ]
 
         },
@@ -108,11 +150,31 @@ let Users = [
             ],
 
             meetingTime: [
-                {meetingType:"coffee", dateOfTheWeek:1, begTimeOfDay:0, endTimeOfDay:1 },
-                {meetingType:"coffee", dateOfTheWeek:2, begTimeOfDay:0, endTimeOfDay:2 },
-                {meetingType:"drink", dateOfTheWeek:1, begTimeOfDay:4, endTimeOfDay:6 },
-                {meetingType: "lunch", dateOfTheWeek:2, begTimeOfDay:0, endTimeOfDay:2},
-                {meetingType: "happy hour", dateOfTheWeek:3, begTimeOfDay: 6, endTimeOfDay: 7}
+                {
+                    meetingType: "coffee", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "drink", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "dinner", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+
             ]
 
         },
@@ -145,11 +207,31 @@ let Users = [
             ],
 
             meetingTime: [
-                {meetingType:"coffee", dateOfTheWeek:1, begTimeOfDay:0, endTimeOfDay:1 },
-                {meetingType:"coffee", dateOfTheWeek:2, begTimeOfDay:0, endTimeOfDay:2 },
-                {meetingType:"drink", dateOfTheWeek:1, begTimeOfDay:4, endTimeOfDay:6 },
-                {meetingType: "lunch", dateOfTheWeek:2, begTimeOfDay:0, endTimeOfDay:2},
-                {meetingType: "happy hour", dateOfTheWeek:3, begTimeOfDay: 6, endTimeOfDay: 7}
+                {
+                    meetingType: "coffee", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "drink", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "dinner", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+
             ]
 
         },
@@ -160,7 +242,7 @@ let Users = [
 
     {_id: 5,
         name: "Mark Zuckerberg",
-        avatar: "https://scontent-dft4-2.xx.fbcdn.net/v/t34.0-1/p160x160/16176889_112685309244626_578204711_n.jpg?oh=a0e86338b6ea9e370a785936b141588c&oe=5A53DC63",
+        avatar: "https://scontent-dft4-2.cdninstagram.com/t51.2885-19/s150x150/13739633_1648409658810275_999417478_a.jpg",
         email: "mark@facebook.com",
         phone: "(624) 154-7888",
         friends: [4,3,2,6,7,9],
@@ -182,11 +264,31 @@ let Users = [
             ],
 
             meetingTime: [
-                {meetingType:"coffee", dateOfTheWeek:1, begTimeOfDay:0, endTimeOfDay:1 },
-                {meetingType:"coffee", dateOfTheWeek:2, begTimeOfDay:0, endTimeOfDay:2 },
-                {meetingType:"drink", dateOfTheWeek:1, begTimeOfDay:4, endTimeOfDay:6 },
-                {meetingType: "lunch", dateOfTheWeek:2, begTimeOfDay:0, endTimeOfDay:2},
-                {meetingType: "happy hour", dateOfTheWeek:3, begTimeOfDay: 6, endTimeOfDay: 7}
+                {
+                    meetingType: "coffee", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "drink", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "dinner", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+
             ]
 
         },
@@ -219,11 +321,31 @@ let Users = [
             ],
 
             meetingTime: [
-                {meetingType:"coffee", dateOfTheWeek:1, begTimeOfDay:0, endTimeOfDay:1 },
-                {meetingType:"coffee", dateOfTheWeek:2, begTimeOfDay:0, endTimeOfDay:2 },
-                {meetingType:"drink", dateOfTheWeek:1, begTimeOfDay:4, endTimeOfDay:6 },
-                {meetingType: "lunch", dateOfTheWeek:2, begTimeOfDay:0, endTimeOfDay:2},
-                {meetingType: "happy hour", dateOfTheWeek:3, begTimeOfDay: 6, endTimeOfDay: 7}
+                {
+                    meetingType: "coffee", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "drink", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "dinner", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+
             ]
 
         },
@@ -256,13 +378,32 @@ let Users = [
             ],
 
             meetingTime: [
-                {meetingType:"coffee", dateOfTheWeek:1, begTimeOfDay:0, endTimeOfDay:1 },
-                {meetingType:"coffee", dateOfTheWeek:2, begTimeOfDay:0, endTimeOfDay:2 },
-                {meetingType:"drink", dateOfTheWeek:1, begTimeOfDay:4, endTimeOfDay:6 },
-                {meetingType: "lunch", dateOfTheWeek:2, begTimeOfDay:0, endTimeOfDay:2},
-                {meetingType: "happy hour", dateOfTheWeek:3, begTimeOfDay: 6, endTimeOfDay: 7}
-            ]
+                {
+                    meetingType: "coffee", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "drink", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "dinner", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
 
+            ]
         },
         messages: [8, 20],
         aiSwitch: false,
@@ -293,13 +434,32 @@ let Users = [
             ],
 
             meetingTime: [
-                {meetingType:"coffee", dateOfTheWeek:0, begTimeOfDay:0, endTimeOfDay:1 },
-                {meetingType:"coffee", dateOfTheWeek:2, begTimeOfDay:5, endTimeOfDay:7 },
-                {meetingType:"drink", dateOfTheWeek:2, begTimeOfDay:4, endTimeOfDay:6 },
-                {meetingType: "lunch", dateOfTheWeek:3, begTimeOfDay:0, endTimeOfDay:2},
-                {meetingType: "happy hour", dateOfTheWeek:3, begTimeOfDay: 6, endTimeOfDay: 7}
-            ]
+                {
+                    meetingType: "coffee", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "drink", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "dinner", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
 
+            ]
         },
         messages: [2, 16],
         aiSwitch: true,
@@ -330,13 +490,32 @@ let Users = [
             ],
 
             meetingTime: [
-                {meetingType:"coffee", dateOfTheWeek:0, begTimeOfDay:0, endTimeOfDay:1 },
-                {meetingType:"coffee", dateOfTheWeek:2, begTimeOfDay:5, endTimeOfDay:7 },
-                {meetingType:"drink", dateOfTheWeek:2, begTimeOfDay:4, endTimeOfDay:6 },
-                {meetingType: "lunch", dateOfTheWeek:3, begTimeOfDay:0, endTimeOfDay:2},
-                {meetingType: "happy hour", dateOfTheWeek:3, begTimeOfDay: 6, endTimeOfDay: 7}
-            ]
+                {
+                    meetingType: "coffee", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "drink", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "dinner", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
 
+            ]
         },
         messages: [7, 15],
         aiSwitch: true,
@@ -367,13 +546,32 @@ let Users = [
             ],
 
             meetingTime: [
-                {meetingType:"coffee", dateOfTheWeek:2, begTimeOfDay:2, endTimeOfDay:3 },
-                {meetingType:"coffee", dateOfTheWeek:1, begTimeOfDay:2, endTimeOfDay:3 },
-                {meetingType:"drink", dateOfTheWeek:2, begTimeOfDay:4, endTimeOfDay:6 },
-                {meetingType: "lunch", dateOfTheWeek:3, begTimeOfDay:2, endTimeOfDay:3},
-                {meetingType: "happy hour", dateOfTheWeek:3, begTimeOfDay: 6, endTimeOfDay: 7}
-            ]
+                {
+                    meetingType: "coffee", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "drink", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
+                {
+                    meetingType: "dinner", availability:
+                        [
+                            {dateOfTheWeek: 0, begTimeOfDay: 1, endTimeOfDay: 2},
+                            {dateOfTheWeek: 2, begTimeOfDay: 4, endTimeOfDay: 6},
+                            {dateOfTheWeek: 5, begTimeOfDay: 4, endTimeOfDay: 6}
+                        ]
+                },
 
+            ]
         },
         messages: [],
         aiSwitch: true,
@@ -381,5 +579,6 @@ let Users = [
     },
 
 ];
+
 
 module.exports = Users;

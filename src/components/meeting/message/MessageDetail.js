@@ -40,7 +40,6 @@ export default class MessageDetail extends Component {
         return (
 
               <Container>
-
                     <GiftedChat messages={this.state.messages}
                                 onSend={(messages) => this.onSend(messages)}
                                 user={{
@@ -49,6 +48,7 @@ export default class MessageDetail extends Component {
                                     avatar:'https://scontent-dft4-2.cdninstagram.com/t51.2885-19/928642_1531465580399845_2020391934_a.jpg',
                                 }}
                                 showUserAvatar
+                                enableEmptySections
                     />
 
               </Container>
