@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a20ce45c-09fb-4bde-9f06-009e94c28506" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/meeting/message/UserCell.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/settings/ProfileView.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/settings/Setting.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/settings/Setting.test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/settings/SettingScreen.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/settings/setReqs/TimeSetting.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/App.js" afterPath="$PROJECT_DIR$/App.js" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/src/components/contacts/Contacts.js" afterPath="$PROJECT_DIR$/src/components/contacts/Contacts.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/contacts/Contacts.test.js" afterPath="$PROJECT_DIR$/src/components/settings/MtgReqView.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/meeting/MeetingList.js" afterPath="$PROJECT_DIR$/src/components/meeting/MeetingList.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/meeting/Meetings.js" afterPath="$PROJECT_DIR$/src/components/meeting/Meetings.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/meeting/NewMtg.test.js" afterPath="$PROJECT_DIR$/src/components/meeting/message/NewMtg.test.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/meeting/message/MessageDetail.js" afterPath="$PROJECT_DIR$/src/components/meeting/message/MessageDetail.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/meeting/message/NewMtg.js" afterPath="$PROJECT_DIR$/src/components/meeting/message/NewMtg.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/mockdata/user/User.js" afterPath="$PROJECT_DIR$/src/components/mockdata/user/User.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/mockdata/user/User.test.js" afterPath="$PROJECT_DIR$/src/components/mockdata/user/User.test.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/settings/DateOfWeek.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/mockdata/MeetingData.js" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -316,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515419784016</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Merge branch 'rocky' of https://github.com/Mandalai/Mandalai-UI into rocky&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <created>1515521515446</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1515521515446</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -605,6 +593,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
