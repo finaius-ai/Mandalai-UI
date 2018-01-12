@@ -9,7 +9,7 @@ import DateOfWeek from "./setReqs/TimeSetting";
 
 export default class SettingScreen extends Component {
     static navigationOptions = {
-        title: 'Welcome',
+        title: 'setting',
     };
 
     state = {
@@ -73,7 +73,6 @@ export default class SettingScreen extends Component {
             </ListItem>
             <ListItem>
                 <MtgReqView user={this.state.user}/>
-
             </ListItem>
             <ListItem>
                 <Button
