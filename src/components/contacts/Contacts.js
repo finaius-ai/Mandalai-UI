@@ -3,28 +3,50 @@ import { StyleSheet, Image, Text, StatusBar } from 'react-native';
 import { Container, Header, Left, Button, Right, Body, Content, List, ListItem, Thumbnail} from "native-base";
 import Entypo from "react-native-vector-icons/Entypo";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
+import {StackNavigator} from 'react-navigation';
+
 
 import Users from '../mockdata/user/User';
+import UserProfile from "./UserProfile";
 
-export default class Contacts extends React.Component {
+class ContactScreen extends React.Component {
+
+    static navigationOptions = ({navigation}) => {
+        const {params} = navigation.state;
+
+        let headerLeft = (
+            <Button transparent onPress={() => params.switch()}>
+                <FontAwesome theme={{iconFamily: 'FontAwesome'}} name='circle' size={35} color={ color} />
+            </Button>
+        );
+        return {headerLeft};
+
+    };
+
 
     state={
         users : [],
         aiMasterSwitch: true
     };
 
-    componentDidMount(){
+
+
+
+    async componentDidMount(){
         this.setState(()=>{
             let users = Users;
             return {users:users}
+        });
 
-        })
+        this.props.navigation.setParams({
+            switch : this.aiSwitchAll,
+        });
+
     }
 
     aiSwitch(user, idx){
        user.aiSwitch = !user.aiSwitch;
        //console.log(user.aiSwitch);
-
        this.setState((prevState) => {
            let users = prevState.users;
            users[idx] = user;
@@ -32,7 +54,8 @@ export default class Contacts extends React.Component {
        })
     }
 
-    aiSwitchAll(){
+    aiSwitchAll = () => {
+
         this.setState((prevState) => {
             let users = prevState.users.map((user) => {
                 user.aiSwitch = !prevState.aiMasterSwitch;
@@ -43,10 +66,11 @@ export default class Contacts extends React.Component {
                 aiMasterSwitch: !prevState.aiMasterSwitch
             }
         })
-    }
+    };
 
 
     render(){
+        const { navigate } = this.props.navigation;
         return (
             <Container>
                 <Header>
@@ -59,35 +83,46 @@ export default class Contacts extends React.Component {
                         <Text style={{fontWeight: 'bold'}}>contacts</Text>
                     </Body>
                     <Right>
-                        <Button transparent >
+                        <Button transparent onPress={() => navigate ('Profile')}>
                             <Entypo name='dots-three-horizontal' size={30} />
                         </Button>
                     </Right>
                 </Header>
                 <Content>
-                    <List>
-                            {this.state.users.map((user, idx) => (
-                                <ListItem avatar key={user._id}>
-                                    <Left>
-                                        <Thumbnail source={{uri:user.avatar}} />
-                                    </Left>
-                                    <Body>
-                                        <Text style={{fontWeight: 'bold'}}>{user.name}</Text>
-                                        <Text note>{user.occupation}</Text>
-                                        <Text note>{user.phone}</Text>
-                                    </Body>
-                                    <Right>
-                                        <Button transparent onPress={()=>{this.aiSwitch(user, idx)}}>
-                                            <FontAwesome theme={{iconFamily: 'FontAwesome'}} name='circle' size={30} color={user.aiSwitch ? "green" : "red"} />
-                                        </Button>
-                                    </Right>
-                                </ListItem>
-                                ))}
 
-                    </List>
+                        <List>
+                            {this.state.users.map((user, idx) => (
+                                    <ListItem  avatar key={user._id}>
+                                        <Left>
+                                            <Thumbnail source={{uri:user.avatar}} />
+                                        </Left>
+                                        <Body>
+                                            <Text style={{fontWeight: 'bold'}}>{user.name}</Text>
+                                            <Text note>{user.occupation}</Text>
+                                            <Text note>{user.phone}</Text>
+                                        </Body>
+                                        <Right>
+                                            <Button transparent onPress={()=>{this.aiSwitch(user, idx)}}>
+                                                <FontAwesome theme={{iconFamily: 'FontAwesome'}} name='circle' size={30} color={user.aiSwitch ? "green" : "red"} />
+                                            </Button>
+                                        </Right>
+                                    </ListItem>
+                            ))}
+                        </List>
+
                 </Content>
 
             </Container>
         )
     }
 }
+
+const Contacts = StackNavigator(
+    {
+        Home: {screen: ContactScreen,},
+        Profile: {screen: UserProfile}
+    },
+
+);
+
+export default Contacts;
