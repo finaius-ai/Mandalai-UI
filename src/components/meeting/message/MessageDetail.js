@@ -15,14 +15,15 @@ export default class MessageDetail extends Component {
     };
 
     componentWillMount() {
-      const userMap = this.props.navigation.state.params.user;
     this.setState({
-      messages: Messages.map((message) => {
-          const userId = message.user;
-          let newMessage = message;
-          newMessage.user = userMap.get(userId);
-          return newMessage
-      }),
+         messages: [
+            {
+              _id: 1,
+              text: 'When do you like to meet?',
+              createdAt: new Date(),
+              user: this.props.navigation.state.params.user,
+            },
+          ],
     });
   }
 
@@ -39,7 +40,6 @@ export default class MessageDetail extends Component {
         return (
 
               <Container>
-
                     <GiftedChat messages={this.state.messages}
                                 onSend={(messages) => this.onSend(messages)}
                                 user={{
@@ -48,6 +48,7 @@ export default class MessageDetail extends Component {
                                     avatar:'https://scontent-dft4-2.cdninstagram.com/t51.2885-19/928642_1531465580399845_2020391934_a.jpg',
                                 }}
                                 showUserAvatar
+                                enableEmptySections
                     />
 
               </Container>

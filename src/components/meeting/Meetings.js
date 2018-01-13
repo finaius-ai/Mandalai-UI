@@ -10,7 +10,7 @@ import MeetingList from "./MeetingList";
 import MessageDetail from "./message/MessageDetail";
 
 
-const NewMtg = StackNavigator(
+const Meetings = StackNavigator(
     {
         MeetingList: {screen: MeetingList},
         MessageDetail: {screen: MessageDetail}
@@ -18,4 +18,4 @@ const NewMtg = StackNavigator(
 );
 
 
-export default NewMtg;
+export default Meetings;

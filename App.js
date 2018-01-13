@@ -3,9 +3,11 @@ import { StyleSheet, Image, Text, StatusBar } from 'react-native';
 import { Container} from "native-base";
 import TabNavigator from 'react-native-tab-navigator';
 import Meetings from "./src/components/meeting/Meetings";
-import DateOfWeek from "./src/components/settings/DateOfWeek";
+
+import DateOfWeek from "./src/components/settings/setReqs/TimeSetting";
 import Contacts from "./src/components/contacts/Contacts";
 import NewMtg from "./src/components/meeting/message/NewMtg";
+import Setting from "./src/components/settings/Setting";
 
 //a walk around to use require dynamically
 
@@ -14,7 +16,7 @@ const tabs = [
     {selectedTab: "meetings", title:"meetings", imageUri: require('./src/img/icons/MeetingsIcon.png'), tabContent:(<Meetings/>)},
     {selectedTab: "todo list", title:"todo list", imageUri: require('./src/img/icons/ToDoIcon.png'), tabContent:(<Text>todo list</Text>)},
     {selectedTab: "contacts", title:"contacts", imageUri: require('./src/img/icons/ContactsIcon.png'), tabContent:(<Contacts/>)},
-    {selectedTab: "settings", title:"settings", imageUri: require('./src/img/icons/SettingsIcon.png'), tabContent:(<DateOfWeek/>)}
+    {selectedTab: "settings", title:"settings", imageUri: require('./src/img/icons/SettingsIcon.png'), tabContent:(<Setting/>)}
 ];
 
 export default class App extends React.Component {

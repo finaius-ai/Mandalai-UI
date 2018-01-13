@@ -17,12 +17,11 @@ export default class MeetingList extends Component {
   componentDidMount(){
       const userMap = new Map(Users.map((user, index) => ([user._id, user])));
       const filteredMeetings = meetings.filter((mtg)=> !mtg.approved);
-      this.setState(() => (
+      this.setState(
           {
           users: userMap,
           meetings: filteredMeetings
-      }
-      ));
+      });
   }
 
   deleteRow(secId, rowId, rowMap) {
@@ -44,23 +43,14 @@ export default class MeetingList extends Component {
                 <Left>
                 <Thumbnail source={{ uri: this.state.users.get(data.initiator).avatar }} />
               </Left>
-
-
-
-
               <Body>
 
-              <TouchableOpacity onPress={() => navigate('MessageDetail', {user : this.state.users })}>
+              <TouchableOpacity onPress={() => navigate('MessageDetail', {user : this.state.users.get(data.initiator) })}>
                 <Text>{this.state.users.get(data.initiator).name}</Text>
                 <Text note>{data.meetingType}</Text>
               </TouchableOpacity>
 
               </Body>
-
-
-
-
-
 
                <Right>
                 <Text note>{data.requestedTime.toLocaleString('en-US', { hour: 'numeric',minute:'numeric', hour12: true })}</Text>

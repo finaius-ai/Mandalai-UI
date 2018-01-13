@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import NewMtg from "./message/NewMtg";
+import NewMtg from "./NewMtg";
 
 it('renders without crashing', () => {
   const rendered = renderer.create(<NewMtg/>).toJSON();
