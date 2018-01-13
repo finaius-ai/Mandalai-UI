@@ -4,6 +4,8 @@
   "private": true,
   "devDependencies": {
     "babel-jest": "^22.0.4",
+    "eslint": "^4.15.0",
+    "eslint-plugin-react": "^7.5.1",
     "jest": "^22.0.4",
     "jest-expo": "23.0.0",
     "react-native-scripts": "1.8.1",
@@ -24,7 +26,7 @@
       "<rootDir>/node_modules/"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!react-native|native-base-shoutem-theme|react-navigation|expo|@expo|react|@ptomasroos|react-native-autocomplete-input)"
+      "node_modules/(?!react-native|native-base-shoutem-theme|react-navigation|expo|@expo|react|@ptomasroos|react-native-autocomplete-input|)"
     ]
   },
   "dependencies": {

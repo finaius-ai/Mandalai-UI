@@ -10,7 +10,7 @@ import Users from '../../mockdata/user/User'
 import { Container, Header, Left, Button, Right, Body, Content, List, ListItem, Thumbnail} from "native-base";
 import UserCell from "./UserCell";
 import MessageDetail from "./MessageDetail";
-import MeetingList from "../MeetingList";
+import MeetingList from "../MeetingRequestList";
 import {StackNavigator} from "react-navigation";
 
 class MessageScreen extends Component {
