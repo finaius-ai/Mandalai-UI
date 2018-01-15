@@ -26,7 +26,7 @@
       "<rootDir>/node_modules/"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!react-native|native-base-shoutem-theme|react-navigation|expo|@expo|react|@ptomasroos|react-native-autocomplete-input|)"
+      "node_modules/(?!react-native|native-base-shoutem-theme|react-navigation|expo|@expo|react|@ptomasroos|)"
     ]
   },
   "dependencies": {
@@ -35,7 +35,6 @@
     "native-base": "^2.3.5",
     "react": "16.0.0",
     "react-native": "0.50.3",
-    "react-native-autocomplete-input": "^3.4.0",
     "react-native-gifted-chat": "^0.3.0",
     "react-native-tab-navigator": "^0.3.4",
     "react-native-vector-icons": "^4.4.3",

@@ -1,8 +1,10 @@
-import React from 'react';
-import { StyleSheet, Image, Text, StatusBar } from 'react-native';
-import { Container, Header, Left, Button, Right, Body, Content, List, ListItem, Thumbnail} from "native-base";
-import FontAwesome from "react-native-vector-icons/FontAwesome";
+/*
+    Container for individual user when searched.
+ */
 
+import React from 'react';
+import {Left, Button, Right, Body, Text, Content, List, ListItem, Thumbnail} from "native-base";
+import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 
 export default class UserCell extends React.Component {
@@ -17,6 +19,7 @@ export default class UserCell extends React.Component {
                 <Body>
                 <Text>{user.name}</Text>
                 <Text note>{user.phone}</Text>
+                <Text/>
                 </Body>
                <Right>
                    <Button transparent onPress= {this.props.onAddUser}>
