@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react';
 import {StyleSheet, Image, TouchableOpacity, ListView} from 'react-native';
-import { Container, Header, Left, Button, Right, Body,Icon, Content, List, ListItem, Thumbnail, Text} from "native-base";
+import { Container, Header, Left, Button, Right, Body,Icon, Content, List, ListItem, Thumbnail, Text, StyleProvider	} from "native-base";
 import Entypo from "react-native-vector-icons/Entypo";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import {StackNavigator} from 'react-navigation';
@@ -13,6 +13,8 @@ import { addNavigationHelpers } from 'react-navigation';
 import { combineReducers, createStore } from 'redux'
 import { connect, Provider } from 'react-redux'
 import UserProfile from "./UserProfile";
+import getTheme from '../../../native-base-theme/components';
+import platform from '../../../native-base-theme/variables/platform';
 
 class ContactScreen extends Component {
 
@@ -74,21 +76,20 @@ class ContactScreen extends Component {
         //console.log(this.props);
         return (
             <Container>
-                <Header sbackgroundColor={"white"}>
+                <StyleProvider  style={getTheme(platform)}>
+                <Header>
                     <Left>
                         <Button transparent onPress={() => this.aiSwitchAll()}>
                             <FontAwesome theme={{iconFamily: 'FontAwesome'}} name='circle' size={35} color={this.state.aiMasterSwitch ? "green" : "red"} />
                         </Button>
                     </Left>
                     <Body>
-                        <Text>contacts</Text>
+                        <Text style={{fontSize:18, fontWeight:'600'}}>contacts</Text>
                     </Body>
                     <Right>
-                        <Button transparent onPress={() => navigate ('Profile')}>
-                            <Entypo name='dots-three-horizontal' size={30} />
-                        </Button>
                     </Right>
                 </Header>
+                </StyleProvider>
                 <Content style={{backgroundColor: "#fff"}}>
                         <List
                             dataSource={this.ds.cloneWithRows(Users)}
@@ -143,5 +144,7 @@ const ContactNavigator = StackNavigator(
 }
 
 );
+
+
 
 export default ContactNavigator;

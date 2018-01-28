@@ -3,7 +3,6 @@ import {
    Button,
 } from 'react-native';
 import {Container, Text, Content} from 'native-base';
-import { NavigationActions } from 'react-navigation'
 
 import DateOfWeek from "./DateOfWeek";
 import TimeOfDay from "./TimeOfDay";
@@ -27,7 +26,9 @@ export default class TimeSetting extends Component {
         return (
             <Container style={{backgroundColor: '#fff',}}>
                 <Content>
+                    <Text style={{fontSize:12, color:'#636363', margin:15}}>what days do you do meetings?</Text>
                     <DateOfWeek/>
+                    <Text style={{fontSize:12, color:'#636363', margin:15}}>what time during do the day do you do meetings?</Text>
                     <TimeOfDay/>
                 </Content>
 

@@ -15,9 +15,7 @@ export default class TimeOfDay extends Component {
         multiSliderValue: [2, 20],
         begNum: num2Time[2],
         endNum: num2Time[20],
-        meetingType: 'coffee time',
-
-
+        meetingType: 'coffee time...',
     };
     multiSliderValuesChange = (values) => {
         this.setState({
@@ -31,22 +29,26 @@ export default class TimeOfDay extends Component {
         const {multiSliderValue} = this.state;
         const {height, width} = Dimensions.get('window');
         return (
-            <View style={{flex:1}}>
+            <View style={{flex:1, alignItems:"center"}}>
                 <View style={styles.timeLabel}>
                     <TextInput
-                        style={{width: 100, borderWidth: 2}}
+                        style={{height: 30, borderColor: 'gray', borderWidth: 1, minWidth:200, marginHorizontal:15}}
+                        maxLength = {80}
                         onChangeText={(meetingType) => this.setState({meetingType})}
                         value={this.state.meetingType}/>
-                    <Text style={{textAlign: "right"}}>{this.state.begNum} to {this.state.endNum}</Text>
+                    <Text style={{textAlign: "right", marginHorizontal:15}}>{this.state.begNum} to {this.state.endNum}</Text>
                 </View>
-                <MultiSlider
-                    values={[multiSliderValue[0], multiSliderValue[1]]}
-                    sliderLength={width}
-                    onValuesChange={this.multiSliderValuesChange}
-                    min={0}
-                    max={23}
-                    step={1}
-                />
+                <View>
+                    <MultiSlider
+                        values={[multiSliderValue[0], multiSliderValue[1]]}
+                        sliderLength={width * 0.9}
+                        onValuesChange={this.multiSliderValuesChange}
+                        min={0}
+                        max={23}
+                        step={1}
+                    />
+                </View>
+
             </View>
 
         )
@@ -57,7 +59,6 @@ export default class TimeOfDay extends Component {
 
 
 const styles = StyleSheet.create({
-
         timeLabel:{
         flexDirection:"row",
         justifyContent:"space-between",
