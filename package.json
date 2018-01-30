@@ -4,6 +4,8 @@
   "private": true,
   "devDependencies": {
     "babel-jest": "^22.0.4",
+    "eslint": "^4.15.0",
+    "eslint-plugin-react": "^7.5.1",
     "jest": "^22.0.4",
     "jest-expo": "23.0.0",
     "react-native-scripts": "1.8.1",
@@ -24,16 +26,22 @@
       "<rootDir>/node_modules/"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!react-native|native-base-shoutem-theme|react-navigation|expo|@expo|react)"
+      "node_modules/(?!react-native|native-base-shoutem-theme|react-navigation|expo|@expo|react|@ptomasroos|)"
     ]
   },
   "dependencies": {
+    "@ptomasroos/react-native-multi-slider": "0.0.11",
     "expo": "^23.0.4",
     "native-base": "^2.3.5",
     "react": "16.0.0",
     "react-native": "0.50.3",
     "react-native-gifted-chat": "^0.3.0",
     "react-native-tab-navigator": "^0.3.4",
-    "react-navigation": "^1.0.0-beta.23"
+    "react-native-vector-icons": "^4.4.3",
+    "react-navigation": "^1.0.0-beta.23",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
   }
+
+
 }
